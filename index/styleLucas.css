@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f7f7f7;
+			color: #333;;
+    /* background-image: url('./pink-paint-brush-textured-background.jpg') */
+  }
+  
+  h1 {
+    color: black;
+    font-size: 50px;
+  }
+  
+  p {
+    color: black;
+    font-size: 30px;
+  }
+  
+  h2 {
+    font-size: 40px;
+  }
+  
+  a {
+    font-size: 25px;
+
+  }
+
+
+
+
+  /* label{
+    font-size: 30;
+  } */
+  
+  #calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #calendar .day {
+    width: 14.28%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #calendar .day.predicted-period {
+    color: white;
+    background-color: red;
+  }
+  
+  #calendar .header {
+    font-weight: bold;
+  }
+  

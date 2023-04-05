@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Calculate Body Fat Percentage</title>
+    <link rel="stylesheet" type="text/css" href="styleLucas.css">
+
+    <style>
+		var {
+			font-size: 50px;
+		}
+        label{
+            font-size: 25px;
+        }
+
+	</style>
+	<script>
+		function calculateBodyFat() {
+			var weight = document.getElementById("weight").value;
+			var tricep = document.getElementById("tricep").value;
+			var subscapular = document.getElementById("subscapular").value;
+			var chest = document.getElementById("chest").value;
+			var axilla = document.getElementById("axilla").value;
+			var abdominal = document.getElementById("abdominal").value;
+			var suprailiac = document.getElementById("suprailiac").value;
+			var thigh = document.getElementById("thigh").value;
+
+			var sum = parseFloat(tricep) + parseFloat(subscapular) + parseFloat(chest) + parseFloat(axilla) + parseFloat(abdominal) + parseFloat(suprailiac) + parseFloat(thigh);
+
+			var bodyDensity = 1.10938 - (0.0008267 * sum) + (0.0000016 * Math.pow(sum, 2)) - (0.0002574 * parseFloat(weight));
+
+			var bodyFatPercentage = (495 / bodyDensity) - 450;
+
+			document.getElementById("result").innerHTML = "Your body fat percentage is " + bodyFatPercentage.toFixed(2) + "%";
+		}
+	</script>
+</head>
+<body>
+	<h1>Calculate Body Fat Percentage</h1>
+
+	<form>
+		<label for="weight">Weight (in pounds):</label>
+		<input type="number" id="weight" name="weight"><br>
+
+		<label for="tricep">Tricep skinfold thickness (in millimeters):</label>
+		<input type="number" id="tricep" name="tricep"><br>
+
+		<label for="subscapular">Subscapular skinfold thickness (in millimeters):</label>
+		<input type="number" id="subscapular" name="subscapular"><br>
+
+		<label for="chest">Chest skinfold thickness (in millimeters):</label>
+		<input type="number" id="chest" name="chest"><br>
+
+		<label for="axilla">Midaxillary skinfold thickness (in millimeters):</label>
+		<input type="number" id="axilla" name="axilla"><br>
+
+		<label for="abdominal">Abdominal skinfold thickness (in millimeters):</label>
+		<input type="number" id="abdominal" name="abdominal"><br>
+
+		<label for="suprailiac">Suprailiac skinfold thickness (in millimeters):</label>
+		<input type="number" id="suprailiac" name="suprailiac"><br>
+
+		<label for="thigh">Thigh skinfold thickness (in millimeters):</label>
+		<input type="number" id="thigh" name="thigh"><br>
+
+		<input type="button" value="Calculate" onclick="calculateBodyFat()">
+
+		<div id="result"></div>
+	</form>
+    <a href="./index.html" rel="import">Return to main page</a>
+</body>
+</html>

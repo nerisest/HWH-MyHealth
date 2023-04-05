@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyHe@lth</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Montserrat', sans-serif;
+			background-color: #f7f7f7;
+			color: #333;
+		}
+		header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+			box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+			padding: 20px;
+		}
+		h1 {
+			font-size: 2.5rem;
+			font-weight: 600;
+			margin: 0;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.card {
+			background-color: #fff;
+			border-radius: 4px;
+			box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+			margin: 20px;
+			flex: 1 1 300px;
+			overflow: hidden;
+			transition: all 0.3s ease-in-out;
+		}
+		.card:hover {
+			transform: scale(1.05);
+			box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+		}
+		.card h2 {
+			font-size: 1.5rem;
+			font-weight: 600;
+			margin: 0;
+			padding: 20px;
+			border-bottom: 1px solid #eee;
+		}
+		.card p {
+			font-size: 1rem;
+			font-weight: 400;
+			margin: 20px;
+			line-height: 1.5;
+		}
+		.card a {
+			display: block;
+			background-color: #333;
+			color: #fff;
+			font-size: 1rem;
+			font-weight: 600;
+			margin: 20px;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 4px;
+			transition: all 0.3s ease-in-out;
+		}
+		.card a:hover {
+			background-color: #555;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>MyHe@lth</h1>
+	</header>
+	<div class="container">
+		<div class="card">
+			<h2>Menstrual Cycle Calculator</h2>
+			<p>Provides key information and statistics on your menstrual cycle</p>
+			<a href="menstrualCycle.html">Calculator</a>
+		</div>
+		<div class="card">
+			<h2>BMI Calculator</h2>
+			<p>Calculates your Body Mass Index</p>
+			<a href="bmi.html">Calculator</a>
+        </div>
+	
+        <div class="card">
+            <h2>BodyFat Calculator </h2>
+            <p>Calculates your BodyFat percentage</p>
+            <a href="bodyFat.html" rel="import">Calculator</a>
+          </div>
+		  <div class="card">
+            <h2>Calories Calculator </h2>
+            <p>Calculates your Calories Calculator</p>
+            <a href="calorie.html" rel="import">Calculator</a>
+          </div>
+
+
+		  
+
+
+    </div>
+</body>

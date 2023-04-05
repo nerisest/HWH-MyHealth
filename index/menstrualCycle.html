@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styleLucas.css">
+</head>
+
+<body>
+
+	<h2>Menstrual Cycle Calculator</h2>
+
+	<p>Enter the first day of your last period:</p>
+	<input type="date" id="lastPeriod">
+	<p>Enter the average length of your menstrual cycle:</p>
+	<input type="number" id="cycleLength">
+	<p>Enter the average length of your period:</p>
+	<input type="number" id="avgPeriodLength">
+	<button onclick="calculatePeriod()">Calculate Next Period</button>
+	<p id="nextPeriod"></p>
+	<div id="calendar"></div>
+	<a href="./index.html" rel="import">Return to main page</a>
+
+
+	<script>
+function calculatePeriod() {
+	var lastPeriod = new Date(document.getElementById("lastPeriod").value);
+	if (lastPeriod > new Date()) {
+		alert("Your last period cannot be in the future :p");
+		return;
+	}
+	var cycleLength = parseInt(document.getElementById("cycleLength").value);
+	if (cycleLength < 1 || cycleLength > 90) {
+		alert("Please enter a valid cycle length (between 1 and 90 days).");
+		return;
+	}
+	var avgPeriodLength = parseInt(document.getElementById("avgPeriodLength").value);
+	if (avgPeriodLength < 1 || avgPeriodLength > 10) {
+		alert("Please enter a valid average period length (between 1 and 10 days).");
+		return;
+	}
+	var nextPeriod = new Date(lastPeriod.getTime() + cycleLength * 24 * 60 * 60 * 1000);
+	var endPeriod = new Date(nextPeriod.getTime() + avgPeriodLength * 24 * 60 * 60 * 1000 - 1);
+	var predictedPeriod = nextPeriod.toLocaleDateString();
+	var predictedPeriodRange = `${nextPeriod.toLocaleDateString()} - ${endPeriod.toLocaleDateString()}`;
+	document.getElementById("nextPeriod").innerHTML =
+		`Your next period is expected on ${predictedPeriod}. The range of expected period is ${predictedPeriodRange}.`;
+
+		function printCalendar(startDate, endDate) {
+			var calendarHTML = "<table><tr><th colspan='7'>Period Calendar</th></tr><tr>";
+			var weekDays = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+			for (var i = 0; i < weekDays.length; i++) {
+				calendarHTML += "<td>" + weekDays[i] + "</td>";
+			}
+			calendarHTML += "</tr>";
+			var currentDate = new Date(startDate.getTime());
+			currentDate.setDate(1); // Set to first day of the month
+			var endDate = new Date(endDate.getTime());
+			endDate.setMonth(endDate.getMonth() + 1); // Set to first day of next month
+			endDate.setDate(0); // Set to last day of current month
+			currentDate.setDate(currentDate.getDate() - currentDate.getDay());
+			while (currentDate <= endDate) {
+				if (currentDate.getDay() === 0) {
+					calendarHTML += "<tr>";
+				}
+				var dateClass = "";
+				if (currentDate >= startDate && currentDate <= endDate) {
+					dateClass = "predicted-period";
+				}
+				calendarHTML += "<td class='day " + dateClass + "'>" + currentDate.getDate() + "</td>";
+				if (currentDate.getDay() === 6) {
+					calendarHTML += "</tr>";
+				}
+				currentDate.setDate(currentDate.getDate() + 1);
+			}
+			calendarHTML += "</table>";
+			document.getElementById("calendar").innerHTML = calendarHTML;
+		}
+		printCalendar2(nextPeriod, endPeriod);
+	}
+
+function printCalendar2(startDate, endDate) {
+  var calendarHTML = "<table><tr><th colspan='7'>Period Calendar</th></tr><tr>";
+  var weekDays = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+  
+  // Add the week day headers to the calendar
+  for (var i = 0; i < weekDays.length; i++) {
+    calendarHTML += "<td>" + weekDays[i] + "</td>";
+  }
+  
+  calendarHTML += "</tr>";
+  var currentDate = new Date(startDate.getTime());
+  
+  // Set the current date to the first day of the month
+  currentDate.setDate(1);
+  var endOfMonth = new Date(endDate.getTime());
+  
+  // Set the end date to the first day of the next month and then subtract one day
+  endOfMonth.setMonth(endOfMonth.getMonth() + 1);
+  endOfMonth.setDate(0);
+  currentDate.setDate(currentDate.getDate() - currentDate.getDay());
+  
+  // Loop through each date in the calendar month
+  while (currentDate <= endOfMonth) {
+    if (currentDate.getDay() === 0) {
+      calendarHTML += "<tr>";
+    }
+    
+    // Check if the current date falls within the period
+    var dateClass = "";
+    if (currentDate >= startDate && currentDate <= endDate) {
+      dateClass = "predicted-period";
+    }
+    
+    // Add the date to the calendar with the appropriate class
+    calendarHTML += "<td class='day " + dateClass + "'>" + currentDate.getDate() + "</td>";
+    if (currentDate.getDay() === 6) {
+      calendarHTML += "</tr>";
+    }
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+  
+  calendarHTML += "</table>";
+  document.getElementById("calendar").innerHTML = calendarHTML;
+}
+
+
+
+	</script>

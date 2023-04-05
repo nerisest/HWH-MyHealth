@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styleSiren.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <h2>BMI Calculator, according to the NHS</h2>
+    <a href="https://www.nhs.uk/conditions/obesity/">More info here</a>
+    
+    <form>
+        <!-- <p>Select your race: </p>
+        <input type="radio" id="asians" name="race" value="Male">
+        <label for="asians">South/other Asian, Chinese, Middle-Eastern, Black/Carribean African</label><br>
+        <input type="radio" id="nonasians" name="race" value="Other">
+        <label for="nonasians">Other</label><br> -->
+
+        <p>Select measuring method: </p>
+        <input type="radio" id="lb" name="measure" value="Imperial">
+        <label for="lb">Imperial</label><br>
+        <input type="radio" id="kg" name="measure" value="Kilograms">
+        <label for="kg">Kilograms</label><br><br>
+
+        <label for="height">Enter your height: </label><br>
+        <input type="text" id="height" height="height"><br>
+        
+        <label for="weight">Enter your weight: </label><br>
+        <input type="text" id="weight" weight="weight"><br>
+        
+    </form>
+    <button type="button" onclick="calculateBMI()">Calculate</button>
+    <div id="bmi"></div>
+    <div id="verdict"></div><br>
+    <a href="./index.html" rel="import">Return to main page</a>
+    </a>
+</body>
+</html>
