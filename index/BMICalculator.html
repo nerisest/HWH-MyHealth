@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin: 0;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .card {
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+        margin: 20px;
+        flex: 1 1 300px;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .card h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    .card p {
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 20px;
+        line-height: 1.5;
+    }
+    .card a {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 20px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+    }
+    .card a:hover {
+        background-color: #555;
+    }
+</style>
+<script>
+    // Function to calculate BMI
+    function calculateBMI() {
+        var weight = document.getElementById("weight").value;
+        var height = document.getElementById("height").value;
+        var bmi = weight / (height * height);
+        document.getElementById("bmi").innerHTML = bmi.toFixed(2);
+    }
+</script>
+
+<body>
+
+<!-- BMI Calculator -->
+<h2>BMI Calculator</h2>
+<p>Enter your weight in kilograms:</p>
+<input type="number" id="weight">
+<p>Enter your height in meters:</p>
+<input type="number" id="height">
+<button onclick="calculateBMI()">Calculate BMI</button>
+<p>Your BMI is: <span id="bmi"></span></p>
+<a href="MyHealth.html" rel="import">Go Back</a>
+
+</body>
+</html>

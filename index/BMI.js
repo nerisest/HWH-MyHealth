@@ -35,11 +35,3 @@ function calculateBMI() {
         document.getElementById("verdict").innerHTML = "You are severely obese! It is suggested that you should talk to a nutritionist.";
     }
 }
-
-function calculateCycle() {
-
-}
-
-function Pregnancy() {
-
-}
