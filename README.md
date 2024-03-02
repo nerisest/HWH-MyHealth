@@ -30,10 +30,10 @@ date, as well as a range of it. A calendar is provided to choose the specific da
 <img src="https://github.com/nerisest/HWH-MyHealth/assets/117354971/5a3b472b-3b10-4b4e-a2c8-4f8fc972f806"/><br>
 *Main page on an app*
 
-<img src="https://github.com/nerisest/HWH-MyHealth/assets/117354971/f58bf2c7-87c8-4442-82f8-f5fad43c690f" width="580"></img>
-<img src="https://github.com/nerisest/HWH-MyHealth/assets/117354971/9806758c-ccab-415b-b958-ab24521f94f5"></img>
-<img src="https://github.com/nerisest/HWH-MyHealth/assets/117354971/04f72f73-ae97-486f-830e-5d582f7276b8"></img>
-<img src="https://github.com/nerisest/HWH-MyHealth/assets/117354971/f7603510-a071-4ed8-ae37-925d0d52a609"></img>
+<img src="https://github.com/nerisest/HWH-MyHealth/assets/117354971/f58bf2c7-87c8-4442-82f8-f5fad43c690f" width="400"></img>
+<img src="https://github.com/nerisest/HWH-MyHealth/assets/117354971/04f72f73-ae97-486f-830e-5d582f7276b8" width="460"></img>
+<img src="https://github.com/nerisest/HWH-MyHealth/assets/117354971/9806758c-ccab-415b-b958-ab24521f94f5" width="400"></img>
+<img src="https://github.com/nerisest/HWH-MyHealth/assets/117354971/f7603510-a071-4ed8-ae37-925d0d52a609" width="540"></img>
 
 
 
