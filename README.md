@@ -3,7 +3,7 @@
 ## Date: April 1st, 2023
 
 ### Introduction
-Team members: Siren Tse (nerisest), Lucas Man (LucasMYS), Nicholas Bunjamin (Sbzro12345), Stelios Neokleous (*github name*), Osborn Liu (*github name*)
+Team members: Siren Tse ([nerisest](https://github.com/nerisest)), Lucas Man ([LucasMYS](https://github.com/LucasMYS)), Nicholas Bunjamin ([Sbzro12345](https://github.com/Sbzro12345)), Stelios Neokleous (*github name*), Osborn Liu (*github name*)
 
 This project is made with correspondence to the challenge given by the Programming Society on "Best hack related to health". 
 
